@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `BookStore`.`BookInventory` (
   `idBookInventory` INT NOT NULL AUTO_INCREMENT,
   `book_name` VARCHAR(45) NOT NULL,
   `book_quantity` VARCHAR(45) NOT NULL,
+  `book_image` VARCHAR(45) NOT NULL,
   `book_price` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idBookInventory`))
 ENGINE = InnoDB;
@@ -66,9 +67,9 @@ CREATE TABLE IF NOT EXISTS `BookStore`.`orders` (
   `card_details_idcard_details` INT NOT NULL,
   `BookInventory_idBookInventory` INT NOT NULL,
   PRIMARY KEY (`idorders`),
-  INDEX `fk_orders_customers_idx` (`customers_idcustomers` ASC) VISIBLE,
-  INDEX `fk_orders_card_details1_idx` (`card_details_idcard_details` ASC) VISIBLE,
-  INDEX `fk_orders_BookInventory1_idx` (`BookInventory_idBookInventory` ASC) VISIBLE,
+  INDEX `fk_orders_customers_idx` (`customers_idcustomers` ASC) ,
+  INDEX `fk_orders_card_details1_idx` (`card_details_idcard_details` ASC) ,
+  INDEX `fk_orders_BookInventory1_idx` (`BookInventory_idBookInventory` ASC),
   CONSTRAINT `fk_orders_customers`
     FOREIGN KEY (`customers_idcustomers`)
     REFERENCES `BookStore`.`customers` (`idcustomers`)
@@ -87,6 +88,7 @@ CREATE TABLE IF NOT EXISTS `BookStore`.`orders` (
 ENGINE = InnoDB;
 
 
+
 -- -----------------------------------------------------
 -- Table `BookStore`.`address`
 -- -----------------------------------------------------
@@ -99,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `BookStore`.`address` (
   `postal_code` VARCHAR(6) NOT NULL,
   `customers_idcustomers` INT NOT NULL,
   PRIMARY KEY (`idaddress`),
-  INDEX `fk_address_customers1_idx` (`customers_idcustomers` ASC) VISIBLE,
+  INDEX `fk_address_customers1_idx` (`customers_idcustomers` ASC) ,
   CONSTRAINT `fk_address_customers1`
     FOREIGN KEY (`customers_idcustomers`)
     REFERENCES `BookStore`.`customers` (`idcustomers`)
