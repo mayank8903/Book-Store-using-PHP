@@ -54,7 +54,7 @@ if($result->num_rows > 0){
                 </div>
                 <div class="extra content">
                     <span class="right floated">
-                    <a href="checkout.php?idbookinventory=<?php echo $row["idBookInventory"] ?>">
+                    <a href="checkout.php?idBookInventory=<?php echo $row["idBookInventory"] ?>">
                     <button class="ui primary basic button">Add to Cart</button>
                     </a>
                     </span>
