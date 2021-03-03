@@ -189,11 +189,17 @@
       </div>
     </div>
   </div>
-  <input type="submit">
+  
   <a href="success.php"><div class="ui primary submit button">Checkout</div></a>
   <div class="ui error message"></div>
 </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <footer class="ui inverted vertical segment">
+        <center>Copyright © BookStore 2021</center>
+      </footer>
 </body>
 
 </html>

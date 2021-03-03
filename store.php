@@ -55,7 +55,7 @@ if($result->num_rows > 0){
                 <div class="extra content">
                     <span class="right floated">
                     <a href="checkout.php?idBookInventory=<?php echo $row["idBookInventory"] ?>">
-                    <button class="ui primary basic button">Add to Cart</button>
+                    <button class="ui purple basic button">Add to Cart</button>
                     </a>
                     </span>
                     <span>
@@ -71,5 +71,12 @@ if($result->num_rows > 0){
 ?>
 
     </div>
+    <br>
+    <br>
+    <br>
+    <footer
+    <footer class="ui inverted vertical segment">
+        <center>Copyright © BookStore 2021</center>
+      </footer>
     </body>
 </html>
